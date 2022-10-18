@@ -1,8 +1,9 @@
+
 //Nama Kelompok
 //Salsabhilla Anggraeni Wardani (5221600019)
 //Aynur Rofiqoh (5221600029)
 
-//TUGAS 3D MODELLING BENDA YANG ADA DI LAB GT302
+//TUGAS MODEL OBJEK 3D BENDA BENDA YANG ADA DI LAB GT302
 
 #include<GL/gl.h>
 #include <GL/glu.h>
@@ -461,60 +462,12 @@ void flr()
     glBindTexture(GL_TEXTURE_2D,v[2]);
     glPushMatrix();
 
-//    glTranslatef(0,-0.5,0);
+
     glScalef(60,1,60);
     glTranslatef(-0.5,19,-0.5);
     cube(0.690, 0.769, 0.871,0,4);
     glPopMatrix();
     glDisable(GL_TEXTURE_2D);
-
-
-
-    /*glPushMatrix();
-
-
-    glTranslatef(0,-0.5,0);
-    glScalef(60,1,60);
-   glTranslatef(-0.5,-1,-0.5);
-    cube(1,1,1,0,8);
-    glPopMatrix();
-
-
-
-
-  /* for(int i=-10; i<=35; i++)
-    {
-        for(float j=-15; j<=14; j+=2)
-        {
-            glPushMatrix();
-//  glTranslatef(0,-0.5,0);
-
-            glScalef(2,.5,1);
-            glTranslatef(j,-.999,-i);
-            if(i%2==0)
-                cube(1, 1, 1);
-            else
-                cube(0, 0, .5);
-            glPopMatrix();
-        }
-    }
-
-    /*for(int i=-10; i<=35; i++)
-    {
-        for(float j=-14; j<=14; j+=2)
-        {
-            glPushMatrix();
-//    glTranslatef(0,-0.5,0);
-
-            glScalef(2,.5,1);
-            glTranslatef(j,-.999,-i);
-            if(i%2!=0)
-                cube(1, 1, 1);
-            else
-                cube(0, 0, .5);
-            glPopMatrix();
-        }
-    }*/
 
 
 }
@@ -527,7 +480,6 @@ void wall1()
 
     glPushMatrix();
 
-//    glTranslatef(0,-0.5,0);
     glScalef(1,20,60);
     glTranslatef(-30,0,-0.5);
     cube(1,1,1,0,2);
@@ -554,7 +506,7 @@ void wall3()
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D,v[0]);
     glPushMatrix();
-//    glTranslatef(0,-0.5,0);
+
     glScalef(60,20,1);
     glTranslatef(-.5,0,10);
     cube(0.741, 0.718, 0.420,0,2);
@@ -564,28 +516,10 @@ void wall3()
 }
 
 
-/*void door()
-{
-    glPushMatrix();
-//    glTranslatef(0,-0.5,0);
-    glScalef(50,20,1);
-    glTranslatef(-.6,0,-30);
-    cube(1,.69,.0);
-    glPopMatrix();
-
-    glPushMatrix();
-//    glTranslatef(0,-0.5,0);
-    glScalef(42,10,1);
-    glTranslatef(-.3,1,-30);
-    cube(1,.69,.0);
-    glPopMatrix();
-}*/
-
-
 void board()
 {
     glPushMatrix();
-//    glTranslatef(0,-0.5,0);
+
     glScalef(10,10,1);
     glTranslatef(-.7,.4,9);
     cube(1,1,1);
@@ -593,7 +527,7 @@ void board()
 
 
     glPushMatrix();
-//    glTranslatef(0,-0.5,0);
+
     glScalef(31.5,11,1);
     glTranslatef(-.601,.32,9.5);
     cube(0,0,0);
@@ -603,7 +537,7 @@ void window()
 {
     glPushMatrix();
     glPushMatrix();
-//    glTranslatef(0,-0.5,0);
+
     glScalef(1,8,15);
     glTranslatef(28,.5,-1);
     glEnable(GL_TEXTURE_2D);
@@ -612,7 +546,7 @@ void window()
     glBindTexture(GL_TEXTURE_2D,v[0]);
     glPopMatrix();
     glPushMatrix();
-//    glTranslatef(0,-0.5,0);
+
     glScalef(1,8,.2);
     glTranslatef(28,.5,-76);
     cube(1,.59,.0);
@@ -622,14 +556,14 @@ void window()
 
 
     glPushMatrix();
-//    glTranslatef(0,-0.5,0);
+
     glScalef(1,.2,15);
     glTranslatef(27.9,50,-1);
     cube(0,0,0);
     glPopMatrix();
 
     glPushMatrix();
-//    glTranslatef(0,-0.5,0);
+
     glScalef(1,.2,15);
     glTranslatef(27.9,30,-1);
     cube(0,0,0);
@@ -637,7 +571,7 @@ void window()
     for(int i=0; i>=-75; i-=2)
     {
         glPushMatrix();
-//    glTranslatef(0,-0.5,0);
+
         glScalef(1,8,.2);
         glTranslatef(27.9,.5,i);
         cube(0,0,0);
@@ -653,7 +587,7 @@ void headwall()
     glBindTexture(GL_TEXTURE_2D,v[2]);
     glPushMatrix();
 
-//    glTranslatef(0,-0.5,0);
+
     glScalef(60,1,60);
     glTranslatef(-0.5,19,-0.5);
     cube(0.690, 0.769, 0.871,0,4);
@@ -703,7 +637,7 @@ float b=1;
 float c= 10;
 void fan()
 {
-    //fan stand
+
     float length = 10;
     float width = 0.3;
     glPushMatrix();
@@ -717,7 +651,7 @@ void fan()
     glPushMatrix();
     glScalef(1,.1,1);
     glTranslatef(-5,150,2);
-    cube(1, 1, 1);            // Set color as glColor3f(R,G,B)
+    cube(1, 1, 1);           
     glRotatef(angle, 0, 0, 1);
     glRecti(-a, -a, a, a);
     cube(1, 0, 0);
@@ -738,18 +672,17 @@ void Chair12()
     float leg_height=height-base_height;
     float leg_width=.4;
 
-    // whole table
+ 
     glPushMatrix();
     glTranslatef(0,leg_height,0);
 
-    // base
     glPushMatrix();
     glScalef(width,base_height,length);
     glTranslatef(-0.5,0,-0.5);
     cube(0.4f, 0.302f, 0.0f);
     glPopMatrix();
 
-    // legs
+  
     glPushMatrix();
     glTranslatef((width/2-leg_width/2),0,(length/2-leg_width/2));
     glScalef(leg_width,leg_height,leg_width);
@@ -777,14 +710,14 @@ void Chair12()
     glTranslatef(-0.5,-1,-0.5);
     cube(0.4f, 0.302f, 0.0f);
     glPopMatrix();
-//upper put
+
     glPushMatrix();
     glScalef(3,2,.5);
     glTranslatef(-0.5,.5,-1);
     cube(1,1,0);
     glPopMatrix();
 
-    //middle part 1
+    
     glPushMatrix();
     glScalef(.2,1,.2);
     glTranslatef(3,0,-2);
@@ -808,18 +741,18 @@ void Table12(float height=2, float width=4,float length=2,float base_height=.5,f
 
     float leg_height=height-base_height;
 
-    // whole table
+
     glPushMatrix();
     glTranslatef(0,leg_height,0);
 
-    // base
+
     glPushMatrix();
     glScalef(width,base_height,length);
     glTranslatef(-0.5,0,-0.5);
     cube(.6,.2,0);
     glPopMatrix();
 
-    // legs
+
     glPushMatrix();
     glTranslatef((width/2-leg_width/2),0,(length/2-leg_width/2));
     glScalef(leg_width,leg_height,leg_width);
@@ -851,14 +784,14 @@ void Table12(float height=2, float width=4,float length=2,float base_height=.5,f
 }
 void test()
 {
-//teacher chair
+
     glPushMatrix();
     glTranslatef(10.0, 1, -14+9 * 2.0 + 2.2f);
     glScalef(0.8f, 0.8f, 0.8f);
     glRotatef(180.0, 0.0, 1.0, 0.0);
     Chair12();
     glPopMatrix();
-    //teacher table
+
     glPushMatrix();
     glTranslatef(10.0, 1, -16+9 * 2.0 + 2.2f);
     glScalef(1.2f, 1.3f, 0.8f);
@@ -873,7 +806,6 @@ void test()
             glTranslatef(i*2.0, 0.6f, -16+j * 2.0 + 2.2f);
             glScalef(0.75f, 0.75f, 0.75f);
             glRotatef(0.0, 0.0, 1.0, 0.0);
-            //Chair12();
             glPopMatrix();
         }
     }
@@ -905,20 +837,20 @@ void table()
     float leg_height=height-base_height;
     float leg_width=1;
 
-    // whole table
+
     glPushMatrix();
     glTranslatef(0,0,5);
     glPushMatrix();
     glTranslatef(0,leg_height,0);
 
-    // base
+
     glPushMatrix();
     glScalef(width,base_height,length);
     glTranslatef(-0.5,0,-0.5);
     cube(0.53,0.39,0.28);
     glPopMatrix();
 
-    // legs
+
     glPushMatrix();
     glTranslatef((width/2-leg_width/2),0,(length/2-leg_width/2));
     glScalef(leg_width,leg_height,leg_width);
@@ -954,9 +886,9 @@ void drop()
 {
 
     glPushMatrix();
-//wear drop front
+
     cube(113/255.0,74/255.0,44/255.0);
-    //glColor3ub (113,74,44);
+ 
     glBegin(GL_POLYGON);
     glVertex3f (460, 660, 0);
     glVertex3f (470, 670, 0);
@@ -967,7 +899,7 @@ void drop()
     glEnd();
 
 
-//wear drop front-drawer 3 - outer
+
 
     glPopMatrix();
 
@@ -997,7 +929,7 @@ void drop()
     glPopMatrix();
 
 
-    //wear drop front-drawer 1 - handel
+
 
     glPushMatrix();
     glTranslatef(1,0,0);
@@ -1019,7 +951,6 @@ void drop()
 
     glPopMatrix();
 
-//wear drop side
 
     cube(62/255.0,43/255.0,35/255.0);
     glColor3ub (62,43,35);
@@ -1038,12 +969,9 @@ void drop()
 void weardrop()
 {
     glPushMatrix();
-//    glTranslatef(0,-0.5,0);
-
-
 
     glTranslatef(9,-7,8);
-//glRotatef(rot,0,1,1);
+
     glScalef(.04,.022,.03);
     drop();
     glPopMatrix();
@@ -1057,8 +985,6 @@ void weardrop2()
 
 
 
-   //glTranslatef(9,-7,8);
-//glRotatef(rot,0,1,1);
     glScalef(.04,.022,.03);
     drop();
     glPopMatrix();
@@ -1138,7 +1064,7 @@ void clock1()
     glVertex3f (680, 900, 0);
     glEnd();
 
-//clock inner
+
     glPushMatrix();
     glTranslatef(0,0,-.98);
     cube(0.847, 0.749, 0.847);
@@ -1255,10 +1181,7 @@ void light2(float a,float b,float c)
         glLightfv(GL_LIGHT2, GL_SPECULAR, l_no);
 
     glLightfv(GL_LIGHT2, GL_POSITION, l_pos);
-    // GLfloat l_spt[] = {0,-1,0,1};
-//    GLfloat spt_ct[] = {66};
-//    glLightfv(GL_LIGHT2, GL_SPOT_DIRECTION, l_spt);
-//    glLightfv(GL_LIGHT2, GL_SPOT_CUTOFF, spt_ct);
+
 
 
 }
@@ -1332,7 +1255,6 @@ void window_light(float a,float b,float c)
 void light()
 {
 
-//light 1
 
     glPushMatrix();
     glPushMatrix();
@@ -1346,9 +1268,7 @@ void light()
     glTranslatef(-0.5,-0.5,-0.5);
     cube(1,1,1,1);
     glPopMatrix();
-    // cout<<l_height<<" "<<spt_cutoff<<endl;
 
-//light2
 
     glPushMatrix();
     glPushMatrix();
@@ -1392,10 +1312,7 @@ void light()
     glTranslatef(-0.5,-0.5,-0.5);
     //cube(1,0,0,true);
     glPopMatrix();
-    // cout<<sl2<<endl;
-    //  cout<<window_val<<endl;
-    // cout<<l_height<<" "<<spt_cutoff<<endl;
-}
+
 
 static void display(void)
 {
@@ -1407,11 +1324,7 @@ static void display(void)
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     gluLookAt(eyeX,eyeY,eyeZ, centerX,centerY,centerZ, 0,1,0);
-    /*eyeX, eyeY, eyeZ Specifies the position of the eye point.
-    centerX, centerY, centerZ Specifies the position of the reference point.
-    upX, upY, upZ Specifies the direction of the up vector.
-    */
-    //  glViewport(0, 0, width, height);
+
 
     glRotatef(rot, 0,1,0);
     table();
@@ -1695,31 +1608,28 @@ int main(int argc, char *argv[])
     glLightModelfv(GL_LIGHT_MODEL_AMBIENT,globalAmbient);
     texture_image();
     int t=1;
-    printf("Warning!!! please turn off caps lock and use shift key before * key and + key.\n");
-    printf("%d. Press 't' for off light1.\n",t++);
-    printf("%d. Press 'y' for off light2.\n",t++);
-    printf("%d. Press 'u' for off cse light.\n",t++);
+    printf("MATIKAN CAPSLOCK DAN GUNAKAN SHIFT KEY SEBELUM * DAN + \n");
+    printf("%d. klik 't' untuk matikan light1.\n",t++);
+    printf("%d. klik 'y' untuk matikan light2.\n",t++);
+    printf("%d. klik 'u' untuk matikan cse light.\n",t++);
 
-    printf("%d. Press '*' for stop fans.\n",t++);
-    printf("%d. Press ';' for start fans.\n",t++);
-    printf("%d. Press 'd' for window open/close.\n",t++);
-    printf("%d. Press 'w' for up.\n%d. press 'e' for down.\n%d. press 's' for right.\n%d. press 'a' for left.\n",t+1,t+2,t+3,t+4);
+    printf("%d. Klik 'w' untuk ke atas.\n%d. klik 'e' untuk ke bawah.\n%d. klik 's' untuk ke kanan.\n%d. klik 'a' untuk ke kiri.\n",t+1,t+2,t+3,t+4);
     t+=4;
-    printf("%d. Press 'o' to move camera left.\n%d. Press 'p' to move camera right.\n",t+1,t+2);
+    printf("%d. klik 'o' untuk memindah kamera ke kiri.\n%d. klik 'p' untuk memindah kamera ke kanan.\n",t+1,t+2);
     t+=2;
-    printf("%d. Press '+' to zoom in.\n%d. Press '-' for zoom out.\n",t+1,t+2);
+    printf("%d. klik '+' untuk zoom in.\n%d. klik '-' untuk zoom out.\n",t+1,t+2);
     t+=2;
-    printf("%d. Press b,n,m for operate with light1,light2 and CSE light respectively.\n",t++);
-    printf("   1. Press '1' for add ambient.\n");
-    printf("   2. Press '2' for reduce ambient.\n");
-    printf("   3. Press '3' for add diffuse.\n");
-    printf("   4. Press '4' for reduce diffuse.\n");
+    printf("%d. klik b,n,m for operate with light1,light2 and CSE light respectively.\n",t++);
+    printf("   1. klik '1' untuk add ambient.\n");
+    printf("   2. klik '2' untuk reduce ambient.\n");
+    printf("   3. klik '3' untuk add diffuse.\n");
+    printf("   4. klik '4' untuk reduce diffuse.\n");
 
-    printf("   5. Press '5' for add specular light.\n");
-    printf("   6. Press '6' for reduce specular light.\n");
-    printf("   7. Press ESC key for exit this operation and goto main programme\n");
+    printf("   5. klik '5' untuk add specular light.\n");
+    printf("   6. klik '6' untuk reduce specular light.\n");
+    printf("   7. klik ESC key untuk keluar dari operasi ini dan kembali ke main program\n");
 
-    printf("%d. Press ESC key for exit the main programme\n",t++);
+    printf("%d. klik ESC untuk kembali ke main program.\n",t++);
 
     glutMainLoop();
 
